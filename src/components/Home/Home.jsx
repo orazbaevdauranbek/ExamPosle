@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import InputForm from '../../Todos/TodoInput/InputForm'
 
 const Home = () => {
   // const state = useSelector(store => store.register)
@@ -20,7 +21,10 @@ const Home = () => {
 
     //console.log('Home:', state.token);
   return (
-    <div>Home</div>
+    <div>
+      <InputForm/>
+    
+    </div>
   )
 }
 
