@@ -36,13 +36,15 @@ const Login = () => {
   }
   // console.log(state, 'Hello');
 
-  return <div>
-    <div className="login">
-      <input type="phone" value={userLogin.phone} onChange={e => setUserLogin({...userLogin, phone: e.target.value})} required placeholder="Enter Phone" />
-      <input type="password" value={userLogin.password} onChange={e => setUserLogin({...userLogin, password: e.target.value})} required placeholder="Enter Password"/>
-      <button onClick={LoginFunc}>Submit</button>
+  return (
+     <div className="w-full min-h-screen pt-4 font-bodyFont bg-gradient-to-t px-4 flex flex-col gap-10 justify-center items-center">
+    <div className="login flex flex-col justify-center items-center bg-red-400 border border-red-200 rounded-md w-[50%] h-[300px] gap-2">
+      <input type="phone" className="bg-cyan-700 border rounded-md w-[60%] placeholder-shown:bg-slate-400 placeholder:text-gray-200 p-2 hover:border-red-400 " value={userLogin.phone} onChange={e => setUserLogin({...userLogin, phone: e.target.value})} required placeholder="Enter Phone" />
+      <input type="password" className="bg-cyan-700 border rounded-md w-[60%] placeholder-shown:bg-slate-400 placeholder:text-gray-200 p-2 hover:border-red-400 " value={userLogin.password} onChange={e => setUserLogin({...userLogin, password: e.target.value})} required placeholder="Enter Password"/>
+      <button className="bg-neutral-300 border border-red-200 p-1 rounded-md w-[100px] text-black hover:border-red-600" onClick={LoginFunc}>Submit</button>
     </div>
-  </div>;
+  </div>
+  )
 };
 
 export default Login;

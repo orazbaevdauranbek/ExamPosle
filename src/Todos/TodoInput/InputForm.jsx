@@ -7,6 +7,7 @@ import Error from "../Error/Error";
 import { addTodo } from "../../store/reducer/todo.slice";
 import { useDispatch } from "react-redux";
 import axios from "axios";
+import Tasks from "../Tasks";
 
 const InputForm = () => {
   const [todoValue, setTodoValue] = useState({
@@ -42,8 +43,9 @@ const InputForm = () => {
           Authorization: "Bearer " + localStorage.getItem("token"),
         },
       })
-      .then((res) => console.log(res));
-    console.log(todoValue);
+      .then((res) => console.log(res)
+      );
+    console.log(todoValue)
   };
 
   useEffect(() => {
@@ -73,6 +75,7 @@ const InputForm = () => {
           <ul className="grid grid-cols-1 gap-4 p- border rounded-md  ">
             <TodoList />
           </ul>
+      <Tasks/>
         </div>
         <Footer />
       </div>
